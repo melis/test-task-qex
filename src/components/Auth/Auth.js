@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router";
 import { loginThunk } from "../../store/userReduser/userActions";
 import style from "./Auth.module.scss";
-import ReactSpeedometer from "react-d3-speedometer"; // and just use it
+import ReactSpeedometer from "react-d3-speedometer";
 const Auth = () => {
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
