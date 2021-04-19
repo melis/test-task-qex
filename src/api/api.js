@@ -19,7 +19,8 @@ class Api {
           () =>
             res({
               name: "Some body",
-              like: 5,
+              phone: "+79581119458",
+              email: "xx@xx.ru",
               image:
                 "https://img.kupigolos.ru/hero/5ff0227fe8e57.jpeg?p=bh&s=8b6e1403d65ed5fdbc76310cff36dbde",
             }),
