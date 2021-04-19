@@ -5,7 +5,7 @@ const user = (state = initialState, action) => {
     case "SET_USER":
       return { user: action.user, error: false, loading: false };
     case "SET_USER_LOADING":
-      return { ...state, loading: true };
+      return { ...state, loading: true, error: false };
     case "SET_USER_ERROR":
       return { ...state, error: action.error, loading: false };
     case "LOG_OUT":
