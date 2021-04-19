@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { loadNewsThunk } from "../../store/newsReduser/newsActions";
-import { loginThunk } from "../../store/userReduser/userActions";
-import style from "./News.module.scss";
 
 const News = () => {
   const { news, loading } = useSelector(({ news }) => news);
@@ -17,7 +15,7 @@ const News = () => {
         ? "Loading..."
         : news.map((el) => {
             return (
-              <div key={el.id}>
+              <div key={el.id} style={{ marginTop: "25px" }}>
                 <h3>{el.title}</h3>
                 <p>{el.body}</p>
                 <hr />

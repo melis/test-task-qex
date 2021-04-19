@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router";
 import { loginThunk } from "../../store/userReduser/userActions";
@@ -47,6 +47,7 @@ const Auth = () => {
         />
         <input type="submit" value="Вход" />
         {error && <div className={style.error}>{error}</div>}
+        {loading && <div className={style.loading}>Loading...</div>}
       </form>
       <ReactSpeedometer
         startColor="green"
@@ -63,5 +64,3 @@ const Auth = () => {
 };
 
 export default Auth;
-
-// localStorage.setItem("test", Number(localStorage.getItem("test")) + 1);

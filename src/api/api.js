@@ -12,8 +12,8 @@ class Api {
     }
   }
 
-  async login(login, password) {
-    const res = new Promise((res, rej) => {
+  login(login, password) {
+    return new Promise((res, rej) => {
       if (login === "admin" && password === "admin") {
         setTimeout(
           () =>
@@ -28,7 +28,6 @@ class Api {
         );
       } else rej("неправильный логин или пароль!");
     });
-    return res;
   }
 }
 
