@@ -11,7 +11,7 @@ const Auth = () => {
   const dispatch = useDispatch();
   const { user, error, loading } = useSelector(({ user }) => user);
 
-  const [max, setMax] = useState(Number(localStorage.getItem("test")));
+  const [max, setMax] = useState(10);
 
   if (user) return <Redirect to="/profile" />;
 
