@@ -3,14 +3,22 @@
   margin: 50px auto;
   padding: 20px;
   border-radius: 10px;
+  border: 1px solid gray;
+
+  h3 {
+    text-align: center;
+  }
 
   input {
     display: block;
     margin: 15px auto;
     padding: 5px 15px;
   }
-  border: 1px solid gray;
+
   .error {
     color: red;
   }
+}
+.speedBox div {
+  text-align: center;
 }

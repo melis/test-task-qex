@@ -3,7 +3,7 @@ import style from "./Home.module.scss";
 
 const Home = () => {
   return (
-    <div className="container">
+    <>
       <h2>Тестовое задание на вакансию “Фронтенд разработчик”</h2>
       <p className={style.text}>
         Разработать приложение со страницами:
@@ -26,7 +26,7 @@ const Home = () => {
         *Делать в стиле социальной сети <br />
         login: admin <br /> password: admin
       </p>
-    </div>
+    </>
   );
 };
 export default Home;

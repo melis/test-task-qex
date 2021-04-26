@@ -4,6 +4,7 @@ import { loadNewsThunk } from "../../store/newsReduser/newsActions";
 
 const News = () => {
   const { news, loading } = useSelector(({ news }) => news);
+
   const dispatch = useDispatch();
   useEffect(() => {
     if (news.length < 1) dispatch(loadNewsThunk);

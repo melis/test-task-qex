@@ -16,7 +16,7 @@ const Auth = () => {
   if (user) return <Redirect to="/profile" />;
 
   return (
-    <div className="container">
+    <>
       <form
         className={style.authForm}
         onSubmit={(e) => {
@@ -29,6 +29,7 @@ const Auth = () => {
           dispatch(loginThunk(login, password));
         }}
       >
+        <h3>Please sign in</h3>
         <input
           type="text"
           placeholder="login"
@@ -49,17 +50,19 @@ const Auth = () => {
         {error && <div className={style.error}>{error}</div>}
         {loading && <div className={style.loading}>Loading...</div>}
       </form>
-      <ReactSpeedometer
-        startColor="green"
-        endColor="red"
-        value={Number(localStorage.getItem("test"))}
-        maxValue={max}
-        forceRender
-      />
+      <div className={style.speedBox}>
+        <ReactSpeedometer
+          startColor="green"
+          endColor="red"
+          value={Number(localStorage.getItem("test"))}
+          maxValue={max}
+          forceRender
+        />
+      </div>
 
       <div>login: admin</div>
       <div>password: admin</div>
-    </div>
+    </>
   );
 };
 

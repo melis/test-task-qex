@@ -5,11 +5,12 @@ import Header from "../Header/Header";
 import Home from "../Home/Home";
 import News from "../News/News";
 import Profile from "../Profile/Profile";
-import style from "./App.module.scss";
+// import style from "./App.module.scss";
+import Container from "@material-ui/core/Container";
 
 const App = () => {
   return (
-    <div className={style.App}>
+    <Container fixed>
       <Router>
         <Header />
         <Switch>
@@ -24,7 +25,7 @@ const App = () => {
           </Route>
         </Switch>
       </Router>
-    </div>
+    </Container>
   );
 };
 
